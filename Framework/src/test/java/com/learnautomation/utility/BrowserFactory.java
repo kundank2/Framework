@@ -22,10 +22,10 @@ public class BrowserFactory {
 		} else {
 			System.out.println("We don't support this browser.");
 		}
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		driver.get(appURL);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		return driver;
 
